@@ -30,7 +30,7 @@
     { expression: "'sleepy'", evaluated: true, code: `let sleepy = false` },
   ];
 
-  let count = 13;
+  let count = 0;
   let isWrong = false;
   let done = false;
   function evaluate(bool) {

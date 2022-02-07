@@ -47,6 +47,8 @@
 </script>
 
 <main>
+  <h1>The JavaScript True/False Game</h1>
+  <h2>{count + 1} / {statements.length}</h2>
   {#if !done}
     <code
       >{#key count}<span in:fly={{ y: -20 }}>{statements[count].code}</span
@@ -64,10 +66,12 @@
   {:else}
     <p>Well done</p>
   {/if}
-  <h1 class="points">{count + 1} / {statements.length}</h1>
 </main>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
   .isWrong {
     animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     transform: translate3d(0, 0, 0);
@@ -111,16 +115,9 @@
     text-align: center;
   }
   main {
-    display: grid;
-    grid-template-columns: 1fr 70ch 1fr;
-    position: relative;
-  }
-  main > * {
-    grid-column: 2;
-  }
-  .points {
-    position: absolute;
-    top: 50px;
-    right: 50px;
+    margin: 1rem;
+    width: auto;
+    display: flex;
+    flex-direction: column;
   }
 </style>

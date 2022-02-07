@@ -115,8 +115,10 @@
     text-align: center;
   }
   main {
-    margin: 1rem;
+    margin: auto;
+    padding: 1rem;
     width: auto;
+    max-width: 70ch;
     display: flex;
     flex-direction: column;
   }
